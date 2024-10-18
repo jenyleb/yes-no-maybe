@@ -33,17 +33,22 @@ body {
     transition: background-color 0.5s ease;
 }
 .container {
-    background-color: #fff3e0;
+    background: radial-gradient(circle, #fff3e0, #ffe0b2);
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     max-width: 400px;
     margin: auto;
-    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
+
 h1 {
     color: #d81b60;
+    position: relative;
+    z-index: 1;
 }
+
 input[type="text"] {
     padding: 10px;
     font-size: 16px;
@@ -97,4 +102,31 @@ h2 {
 }
 .hidden {
     display: none;
+}
+
+/* Crystal ball animation */
+.container::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    animation: pulse 2s infinite;
+    z-index: 0;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
