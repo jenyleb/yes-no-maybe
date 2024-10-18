@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Me Anything!</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #fce4ec;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background-color: #fff3e0;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        h1 {
+            color: #d81b60;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 2px solid #ff80ab;
+            width: 80%;
+            margin-bottom: 20px;
+            outline: none;
+        }
+        button {
+            background-color: #ff80ab;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #d81b60;
+        }
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin-top: 30px;
+        }
+        .emoji {
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ask Me Anything!</h1>
+        <p>Type your question below and I'll give you a random answer!</p>
+        <input type="text" id="question" placeholder="Your question...">
+        <br>
+        <button onclick="getAnswer()">Get My Answer</button>
+        <h2 id="answer"></h2>
+        <div id="emoji"></div>
+    </div>
+
+    <script>
+        function getAnswer() {
+            const answers = ["Yes", "No", "Maybe"];
+            const emojis = ["😊", "🙅", "🤔"];
+            const randomIndex = Math.floor(Math.random() * answers.length);
+
+            const userQuestion = document.getElementById("question").value;
+            const answerElement = document.getElementById("answer");
+            const emojiElement = document.getElementById("emoji");
+
+            if (userQuestion.trim() === "") {
+                answerElement.innerText = "Please ask a question!";
+                emojiElement.innerText = "❓";
+            } else {
+                answerElement.innerText = answers[randomIndex];
+                emojiElement.innerText = emojis[randomIndex];
+            }
+        }
+    </script>
+
+</body>
+</html>
