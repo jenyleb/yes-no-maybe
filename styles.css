@@ -25,25 +25,29 @@
 }
 
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-color: #fce4ec;
-    color: #333;
+    font-family: 'Sacramento', cursive, sans-serif; 
+    background-image: url(oreo.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: #fff; 
     text-align: center;
     padding: 50px;
     transition: background-color 0.5s ease;
 }
+
 .container {
-    background-color: #fff3e0;
+    background: rgba(255, 255, 255, 0.8); 
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     max-width: 400px;
     margin: auto;
     transition: transform 0.3s ease;
 }
+
 h1 {
-    color: #d81b60;
+    color: #d81b60; 
 }
+
 input[type="text"] {
     padding: 10px;
     font-size: 16px;
@@ -54,12 +58,14 @@ input[type="text"] {
     outline: none;
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
+
 input[type="text"]:focus {
     transform: scale(1.05);
     border-color: #d81b60;
 }
+
 button {
-    background-color: #ff80ab;
+    background-color: #ff80ab; 
     border: none;
     color: white;
     padding: 10px 20px;
@@ -68,12 +74,15 @@ button {
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.1s ease;
 }
+
 button:hover {
     background-color: #d81b60;
 }
+
 button:active {
     transform: scale(1.1);
 }
+
 h2 {
     font-size: 24px;
     color: #333;
@@ -82,11 +91,13 @@ h2 {
     transform: scale(0.8);
     animation: fadeInScale 0.5s ease forwards;
 }
+
 #emoji {
     font-size: 40px;
     opacity: 0;
     animation: fadeInScale 0.5s ease forwards, shake 0.5s ease;
 }
+
 #message {
     margin-top: 20px;
     font-size: 18px;
@@ -95,6 +106,7 @@ h2 {
     transform: scale(0.8);
     animation: fadeInScale 0.5s ease forwards;
 }
+
 .hidden {
     display: none;
 }
