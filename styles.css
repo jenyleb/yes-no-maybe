@@ -25,18 +25,17 @@
 }
 
 body {
-    
     background-image: url('oreo.jpg'); 
     background-size: cover;
     background-position: center;
-    color: #0000; 
+    color: #000; /* Changed to black for text */
     text-align: center;
     padding: 50px;
     transition: background-color 0.5s ease;
 }
 
 .container {
-      font-family: comic sans;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Specify the full font name */
     background: rgba(255, 255, 255, 0.8); 
     padding: 30px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
@@ -46,7 +45,8 @@ body {
 }
 
 h1 {
-    color: #d81b60; 
+    font-family: 'Sacramento', cursive; /* Romantic font */
+    color: #ff69b4; /* Pink color */
 }
 
 input[type="text"] {
@@ -101,7 +101,7 @@ h2 {
 }
 
 #message {
-    font-family: comic sans;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Ensure Comic Sans for message */
     margin-top: 20px;
     font-size: 18px;
     color: #d81b60;
